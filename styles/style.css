@@ -214,8 +214,7 @@ body > header {
   position: relative;
   margin: 5rem 0 1rem 0;
   padding-top: 56.25%;
-  background-image: url('.assets/header-img.jpg');
-  background-size: cover;
+
   border-radius: var(--rounded);
 }
 /* The actual title */
@@ -425,8 +424,8 @@ main > article,
 main > section {
   margin: 2rem 0 2rem 0;
   padding: 2rem;
-  background: var(--turquoise);
-  color: var(--blueberry);
+ background-color: transparent;
+  color: white;
   border-radius: var(--rounded);
 }
 main > article > h2:first-of-type,
