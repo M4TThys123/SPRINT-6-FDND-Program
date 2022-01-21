@@ -1,4 +1,4 @@
-# Titel
+# FDND programma 
 
 <!-- Geef je project een titel en schrijf in één zin wat het is -->
 
@@ -36,7 +36,7 @@ Weet een gebruiker wat die moet doen?
 
 [🌐 Live Versie](https://m4tthys123.github.io/the-startup-fdnd-program/)
 
-De opleiding Frontend Development & Design wil een redesign van de program microsite die alle gewenste content bevat, tevens moet de content overzichtelijk zijn. En tenslotte moet de site voldoen aan de huisstijl.
+De opleiding Frontend Development & Design wil een redesign van de programma microsite die alle gewenste content bevat, tevens moet de content overzichtelijk zijn. En tenslotte moet de site voldoen aan de huisstijl.
 
 <!-- In de Beschrijving staat hoe je project er uit ziet, hoe het werkt en wat je er mee kan. -->
 <!-- Voeg een mooie poster visual toe 📸 -->
@@ -79,6 +79,7 @@ cd the-startup-fdnd-program
 
 Link naar de [Wiki](https://github.com/M4TThys123/the-startup-fdnd-program/wiki)
 ## Bronnen
+Color an [Wiki](https://github.com/M4TThys123/the-startup-fdnd-program/wiki)
 
 ## Licentie
 
