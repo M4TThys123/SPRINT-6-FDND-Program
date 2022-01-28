@@ -214,13 +214,11 @@ body > header {
   position: relative;
   margin: 5rem 0 1rem 0;
   padding-top: 56.25%;
-  background-size: cover;
 
   border-radius: var(--rounded);
-  grid-template-columns: minmax(20rem, 75rem) auto;
 }
 /* The actual title */
-body > header > h1 > span {
+body >  h1 > span {
   display: block;
   position: absolute;
   bottom: 0;
@@ -422,6 +420,7 @@ body > nav > a:focus {
 
 /* <MAIN> */
 /* Block level elements in main */
+main > article,
 main > section {
   margin: 2rem 0 2rem 0;
   padding: 2rem;
@@ -429,7 +428,8 @@ main > section {
   color: white;
   border-radius: var(--rounded);
 }
-h2{
+main > article > h2:first-of-type,
+main > section > h2:first-of-type {
   margin: -2rem 0 2rem -2rem;
   padding: 0 1rem 1rem 2rem;
   position: relative;
@@ -441,7 +441,9 @@ h2{
   border-bottom-right-radius: var(--rounded);
   z-index: 2;
 }
+main > article > h2:first-of-type:before,
 main > section > h2:first-of-type:before,
+main > article > h2:first-of-type:after,
 main > section > h2:first-of-type:after {
   content: "";
   position: absolute;
@@ -450,17 +452,25 @@ main > section > h2:first-of-type:after {
   height: calc(2 * var(--rounded));
   border-top-left-radius: var(--rounded);
 }
+main > article > h2:first-of-type:before,
 main > section > h2:first-of-type:before {
   top: 0;
   right: calc(-1 * var(--rounded));
   box-shadow: 0 calc(-1 * var(--rounded)) 0 0 var(--blueberry);
 }
+main > article > h2:first-of-type:after,
 main > section > h2:first-of-type:after {
   left: 0;
   bottom: calc(-2 * var(--rounded));
   box-shadow: 0 calc(-1 * var(--rounded)) 0 0 var(--blueberry);
 }
-
+main h3 {
+  margin: 0.5rem 0;
+  font-size: 2.4rem;
+  font-weight: normal;
+  line-height: 1.2;
+  color: var(--blueberry);
+}
 main h4 {
   margin: 1.4rem 0;
   font-weight: bold;
@@ -732,7 +742,7 @@ a.icon svg {
   body {
     padding: 1rem;
     display: grid;
-    grid-template-columns: minmax(20rem, 50rem);
+    grid-template-columns: minmax(20rem, 50rem) 20rem;
     grid-template-areas:
       "header nav"
       "main nav"
@@ -762,6 +772,7 @@ a.icon svg {
 @media (min-width: 90rem) {
   body {
     display: grid;
+    grid-template-columns: minmax(20rem, 50rem) 20rem auto;
     grid-template-areas:
       "header nav ."
       "main nav ."
@@ -773,56 +784,62 @@ a.icon svg {
   }
 }
 
-/* Code Matthijs */
-.semester{
-  margin-bottom: 3.5em;
-}
-
-
-.static__card{
+article section:nth-of-type(3n+1){
+  margin: 2rem 0 2rem 0;
+  padding: 2rem;
+  border-top-left-radius: var(--rounded);
+  right: calc(-1 * var(--rounded));
+  background: var(--turquoise);
+  color: var(--blueberry);
   border-radius: var(--rounded);
-  padding: 1rem;
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 0;
-  border: 3px solid var(--lavender);
-  position: relative;
 }
-.static__card a{
-  color: var(--lavender);
-  font-size: 1.5em;
+article section:nth-of-type(3n+2){
+  margin: 2rem 0 2rem 0;
+  padding: 2rem;
+  border-top-left-radius: var(--rounded);
+  right: calc(-1 * var(--rounded));
+  background: var(--lavender);
+  color: var(--blueberry);
+  border-radius: var(--rounded);
+}
+ article section:nth-of-type(3n+3){
+  margin: 2rem 0 2rem 0;
+  padding: 2rem;
+  border-top-left-radius: var(--rounded);
+  right: calc(-1 * var(--rounded));
+  background:  #FF73FF;
+  color: var(--blueberry);
+  border-radius: var(--rounded);
 }
 
-.static__card p{
-  margin-bottom: 1.5em;
-  font-size: 16px;
+section > h3, h2{
+  margin: -2rem 0 2rem -2rem;
+  padding: 0 1rem 1rem 2rem;
+  position: relative;
+  width: fit-content;
+  font-size: calc(1.5rem + 1.5vw);
+  z-index: 2;
+  line-height: calc(1.5rem + 1.5vw);
+  border-bottom-right-radius: var(--rounded);
+  background-color: var(--blueberry);
   color: var(--white);
 }
 
-.static__card span{
-  border-radius: var(--rounded);
-  padding: .25rem;
-  color: var(--blueberry);
-  background-color: var(--turquoise);
+.visitekaartje > img{
+  width: 30%;
+  height: 30%;
+  margin: 1em;
 }
 
-.static-wrapper{
+.squadpage  > img{
+  width: 30%;
+  height: 30%;
+  margin: 1em;
+}
+.visitekaartje, .squadpage{
   display: flex;
-  flex-direction: row;
-  gap: 1em;
-}
-.static__container{
-  margin-bottom: 4em;
-}
-
-.het-statische-web{
-  background: var(--blueberry);
-}
-
-.static__tags span{
-  margin-bottom: .5em;
-}
-/* swiper */
-.swiper-pagination{
+  justify-content: center;
 
 }
+
+
