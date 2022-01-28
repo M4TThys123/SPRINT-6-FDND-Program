@@ -218,7 +218,7 @@ body > header {
   border-radius: var(--rounded);
 }
 /* The actual title */
-body > header > h1 > span {
+body >  h1 > span {
   display: block;
   position: absolute;
   bottom: 0;
@@ -824,3 +824,22 @@ section > h3, h2{
   background-color: var(--blueberry);
   color: var(--white);
 }
+
+.visitekaartje > img{
+  width: 30%;
+  height: 30%;
+  margin: 1em;
+}
+
+.squadpage  > img{
+  width: 30%;
+  height: 30%;
+  margin: 1em;
+}
+.visitekaartje, .squadpage{
+  display: flex;
+  justify-content: center;
+
+}
+
+
